@@ -1,5 +1,5 @@
 {
-    "name": "igonics/laravel-disqus-sso",
+    "name": "rzilvinas/laravel-disqus-sso",
     "description": "Generates payload to use with Disqus SSO",
     "keywords": ["disqus", "sso", "laravel","igonics"],
     "license": "MIT",
