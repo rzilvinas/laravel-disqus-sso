@@ -3,6 +3,7 @@
 namespace IGonics\Disqus;
 
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Arr;
 
 /**
  * Basic helper class to be used for SSO authentication with Disqus.
@@ -51,7 +52,7 @@ class Disqus
 
         // Only these are supported by Disqus
         // See: https://help.disqus.com/customer/portal/articles/236206-single-sign-on#user-data
-        $userData = array_only($userData, ['id', 'username', 'email', 'avatar', 'url']);
+        $userData = Arr::only($userData, ['id', 'username', 'email', 'avatar', 'url']);
 
         $timestamp = time();
         $encodedData = $this->getEncodedData($userData);
